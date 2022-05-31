@@ -4,11 +4,11 @@
   },
   "builds": [
     {
-      "src": "index.js",
+      "src": "./src/index.ts",
       "use": "@vercel/node",
       "config": {
         "includeFiles": [
-          "public/**"
+          "./app/public/**"
         ],
         "memory": 128
       }
@@ -17,7 +17,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "index.js"
+      "dest": "./src/index.ts"
     }
   ]
 }
