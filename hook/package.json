@@ -4,7 +4,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "copyfiles -u -a ../app/public/** ./** && tsc",
+    "build": "tsc && copyfiles -u -a ../app/public/** ./**",
+    "build_vercel" : "tsc; mkdir app; cp -r ../app/public/* ./app",
     "dev": "nodemon --exec npx ts-node ./src/index.ts"
   },
   "devDependencies": {
