@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "tsc && copyfiles -u -a ../app/public/** ./**",
-    "build_vercel" : "tsc; mkdir app; cp -r ../app/public/* ./app",
+    "vercel-build" : "tsc; mkdir app; cp -r ../app/* ./app",
     "dev": "nodemon --exec npx ts-node ./src/index.ts"
   },
   "devDependencies": {
