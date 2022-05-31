@@ -48,7 +48,7 @@ export default {
 			}
 		}),
 		replace({
-			'process.env.NODE_ENV': JSON.stringify( 'production' ),
+			'process.env.NODE_ENV': JSON.stringify( production ? 'production' : 'development'),
 			preventAssignment: true,
 		}),
 		// we'll extract any component CSS out into

@@ -14,10 +14,10 @@
   let gameWasWon = false;
   let assistant;
   
+  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZjAwMTM4ZmI0M2JiOTI0MGM5ZDQ2ZDViZDQ3ZDdkM2YxYmQ3NWFjYTRiOTk5OWU4ZGE1YjExN2Y4ZmJkNzYyOTQzMjQiLCJhdWQiOiJWUFMiLCJleHAiOjE2NTQwODY4NzksImlhdCI6MTY1NDAwMDQ2OSwiaXNzIjoiS0VZTUFTVEVSIiwidHlwZSI6IkJlYXJlciIsImp0aSI6ImFiMjg0YmY2LTBlZGItNDRjMC04ZWJjLTg1MzI1MGMxZWE3ZSIsInNpZCI6ImZjNTY3Y2IxLWI1ZjgtNGQ1NC04MjM5LTc0NTc2YjFiZDgyNyJ9.J5IihjXkWHzp7gWx8SLm52o77ivII6HsvwnEDSR8_su_GG82Nd6yxRrgSKIVqiTR-vrM9TLHO5q85Xxdp-x-XdZgyaYA1ZQjP1CB7uLz2pnfvNTgkCg24n41aerpXmOUFiHvEfREC5hfi-SNiL-ejJCe1RYR0MKihSdGu3TFJ6SNtRmXoKdPIeyFqeqXZbKOlEGkH_-2uFn32CbJBmgHkz2GWvCJ4slnA-GINLlTBES7d2eja31-zWL7_IUrAg3hrQxUx7Y4xSUNUjLGEaAflTzEJuUpmX6HAiiG9ebxco_J9Zpzsgs1ubGSypn-fn_LsNlSp3bq2iLHa1sbaN0f32EVMjelAtwGH7CYw6sfLQZAFFIBXKn-LZTTK9JL5U5RudKxCQnr-569Y3vXcKcWLn7hnAIk8cmunPPwUxT9WWehU4lXEg6q0th9KKUUNPMjLxixqzyWeI8UOoNan6rW-__rbDYu_biFfuIgX4bUnxngZrCYVtXTzE8eHex-3CVwlJfQoThSI9C6BQooxqm-SNfRlzlYFB4sQWvHajogJkjMefMMu_kyfBCmbfwWffnJ7zebRGkpu_6K4Euf1nYPfAqmjYjrQmo6QOMmfWqbB5w0QnJeGqyzOBu7__WDwlZpz7vD7M5jSLl_TxtIs3wgdBPhxDYS9xgJmyS0GYVkuN8";
 
   // Set the name of your SmartApp for activation
   let initPhrase = 'запусти 2048';
-
   let character = 'eva'; // default, before sber client gets state
   $: setTheme(character);
   let xTouchCoordinate, yTouchCoordinate;
@@ -28,7 +28,9 @@
     }
 
     const init = () => {
-      let token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZjAwMTM4ZmI0M2JiOTI0MGM5ZDQ2ZDViZDQ3ZDdkM2YxYmQ3NWFjYTRiOTk5OWU4ZGE1YjExN2Y4ZmJkNzYyOTQzMjQiLCJhdWQiOiJWUFMiLCJleHAiOjE2NTQwODY4NzksImlhdCI6MTY1NDAwMDQ2OSwiaXNzIjoiS0VZTUFTVEVSIiwidHlwZSI6IkJlYXJlciIsImp0aSI6ImFiMjg0YmY2LTBlZGItNDRjMC04ZWJjLTg1MzI1MGMxZWE3ZSIsInNpZCI6ImZjNTY3Y2IxLWI1ZjgtNGQ1NC04MjM5LTc0NTc2YjFiZDgyNyJ9.J5IihjXkWHzp7gWx8SLm52o77ivII6HsvwnEDSR8_su_GG82Nd6yxRrgSKIVqiTR-vrM9TLHO5q85Xxdp-x-XdZgyaYA1ZQjP1CB7uLz2pnfvNTgkCg24n41aerpXmOUFiHvEfREC5hfi-SNiL-ejJCe1RYR0MKihSdGu3TFJ6SNtRmXoKdPIeyFqeqXZbKOlEGkH_-2uFn32CbJBmgHkz2GWvCJ4slnA-GINLlTBES7d2eja31-zWL7_IUrAg3hrQxUx7Y4xSUNUjLGEaAflTzEJuUpmX6HAiiG9ebxco_J9Zpzsgs1ubGSypn-fn_LsNlSp3bq2iLHa1sbaN0f32EVMjelAtwGH7CYw6sfLQZAFFIBXKn-LZTTK9JL5U5RudKxCQnr-569Y3vXcKcWLn7hnAIk8cmunPPwUxT9WWehU4lXEg6q0th9KKUUNPMjLxixqzyWeI8UOoNan6rW-__rbDYu_biFfuIgX4bUnxngZrCYVtXTzE8eHex-3CVwlJfQoThSI9C6BQooxqm-SNfRlzlYFB4sQWvHajogJkjMefMMu_kyfBCmbfwWffnJ7zebRGkpu_6K4Euf1nYPfAqmjYjrQmo6QOMmfWqbB5w0QnJeGqyzOBu7__WDwlZpz7vD7M5jSLl_TxtIs3wgdBPhxDYS9xgJmyS0GYVkuN8';
+      if (process.env.NODE_ENV === 'production') {
+        return createAssistant({getState});
+      }
       return createSmartappDebugger({
         token,
         initPhrase,
