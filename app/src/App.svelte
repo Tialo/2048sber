@@ -14,7 +14,7 @@
   let gameWasWon = false;
   let assistant;
   
-  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZjAwMTM4ZmI0M2JiOTI0MGM5ZDQ2ZDViZDQ3ZDdkM2YxYmQ3NWFjYTRiOTk5OWU4ZGE1YjExN2Y4ZmJkNzYyOTQzMjQiLCJhdWQiOiJWUFMiLCJleHAiOjE2NTQwODY4NzksImlhdCI6MTY1NDAwMDQ2OSwiaXNzIjoiS0VZTUFTVEVSIiwidHlwZSI6IkJlYXJlciIsImp0aSI6ImFiMjg0YmY2LTBlZGItNDRjMC04ZWJjLTg1MzI1MGMxZWE3ZSIsInNpZCI6ImZjNTY3Y2IxLWI1ZjgtNGQ1NC04MjM5LTc0NTc2YjFiZDgyNyJ9.J5IihjXkWHzp7gWx8SLm52o77ivII6HsvwnEDSR8_su_GG82Nd6yxRrgSKIVqiTR-vrM9TLHO5q85Xxdp-x-XdZgyaYA1ZQjP1CB7uLz2pnfvNTgkCg24n41aerpXmOUFiHvEfREC5hfi-SNiL-ejJCe1RYR0MKihSdGu3TFJ6SNtRmXoKdPIeyFqeqXZbKOlEGkH_-2uFn32CbJBmgHkz2GWvCJ4slnA-GINLlTBES7d2eja31-zWL7_IUrAg3hrQxUx7Y4xSUNUjLGEaAflTzEJuUpmX6HAiiG9ebxco_J9Zpzsgs1ubGSypn-fn_LsNlSp3bq2iLHa1sbaN0f32EVMjelAtwGH7CYw6sfLQZAFFIBXKn-LZTTK9JL5U5RudKxCQnr-569Y3vXcKcWLn7hnAIk8cmunPPwUxT9WWehU4lXEg6q0th9KKUUNPMjLxixqzyWeI8UOoNan6rW-__rbDYu_biFfuIgX4bUnxngZrCYVtXTzE8eHex-3CVwlJfQoThSI9C6BQooxqm-SNfRlzlYFB4sQWvHajogJkjMefMMu_kyfBCmbfwWffnJ7zebRGkpu_6K4Euf1nYPfAqmjYjrQmo6QOMmfWqbB5w0QnJeGqyzOBu7__WDwlZpz7vD7M5jSLl_TxtIs3wgdBPhxDYS9xgJmyS0GYVkuN8";
+  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZjAwMTM4ZmI0M2JiOTI0MGM5ZDQ2ZDViZDQ3ZDdkM2YxYmQ3NWFjYTRiOTk5OWU4ZGE1YjExN2Y4ZmJkNzYyOTQzMjQiLCJhdWQiOiJWUFMiLCJleHAiOjE2NTQxODMwMDAsImlhdCI6MTY1NDA5NjU5MCwiaXNzIjoiS0VZTUFTVEVSIiwidHlwZSI6IkJlYXJlciIsImp0aSI6IjEwYWQwZDBiLWU2YTMtNDc1Yy1hYWQ3LWQxN2JmMWY4NzgwNCIsInNpZCI6IjNlMWY1ZTRmLWM3NTMtNGExNS1hNjU4LWQ1MjM4NzhlNDc3OCJ9.h0VmEXoLjuCw7Xp_nW24rPDnJuJPx-8XL0bHu2bhqVIrKymiWXjGG5XEsqv9JBl9UU0kAn_kQnSIHObUHdbFciQvnaYjRnYYEm6dGUUHnJ8hh7OhAEn3gENq_BxIroeOjXrpss655e3Rv1EDfewHeZ49L6ZMcHQZmhgosZmjpqF6dfNb9zNPQANHVZi7hxeRH_wQAqeB0L3EGLNCwVn03e6Mw2W8tOYnt2UF8tSgfnYnM3LWmpd5UEDo_5DaFLh8NkUvbfj4LrAThpPYQMihDcHQ8EJ6ucUJbtpSdW0Z1SPiSAV9N5LlMHIfM2F5HplpWrGArDIoFaAfYE1MjIFw4C4dYdRjxsbxW89xnE3VP6gAA_sF5uv305vdFntQ4t4GiWbs5IuanOSF2bCtElgANKU6Y7HLalhRaDTYoJzH-DOlwwZREZU9uB4EW0ZkatvQwb9mryZSjJgk4pS626Relowr04d0UivdiPU2KVf1dRkNWANLpLl7Fq22Ue89ylB__p1ond-2yeNKxvI4mXrg4RuSniaDc6YUML9_5mMdpplpq1fU9yONJMnYEtCHXflv0k27lk87cQZDek0696XoEV-pId29rNdoZv1qttVnoYXHOFoxnO1XtchoDjDF9Ju3SYamVWv7crmGkha7Jwp9l59cAZy63yfZXNWomsgJQ24";
 
   // Set the name of your SmartApp for activation
   let initPhrase = 'запусти 2048';
@@ -427,11 +427,11 @@
   }
 
   .two {
-    background-color: #777777;
+    background-color: #c0b4b4;
     font-size: 45px;
   }
   .four {
-    background-color: #595756;
+    background-color: #9d9695;
     font-size: 45px;
   }
   .eight {
@@ -677,11 +677,11 @@
     }
 
     .two {
-      background-color: #777777;
+      background-color: #c0b4b4;
       font-size: 25px;
     }
     .four {
-      background-color: #595756;
+      background-color: #9d9695;
       font-size: 25px;
     }
     .eight {
@@ -746,22 +746,6 @@
 
     .heading .title {
       float: left;
-    }
-
-    .right {
-      float: right;
-    }
-
-    .left {
-      float: left;
-    }
-
-    .clearfix {
-      clear: both;
-    }
-
-    .play-now {
-      margin-top: 22px;
     }
 
     .play-now a {
