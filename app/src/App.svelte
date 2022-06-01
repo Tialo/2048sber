@@ -343,6 +343,9 @@
   }
 
   .game-container .game-message p {
+    color: white;
+    text-shadow: #cccccc 0 0 20px;
+
     font-size: 60px;
     font-weight: 700;
     height: 70px;
@@ -373,11 +376,14 @@
   }
 
   .game-container .game-message.game-won {
+
     background: rgba(30, 158, 55, .4);
     color: #f9f6f2
+
   }
 
   .game-container .game-message.game-won a.keep-playing-button {
+
     margin-left: -20px;
     display: inline-block;
     background: #416849;
@@ -387,6 +393,7 @@
   .game-container .game-message.game-over a.retry-button {
     display: inline-block;
     background: #416849;
+    box-shadow: #416849 0 0 10px;
   }
 
   .game-container .game-message.game-won,
@@ -429,50 +436,88 @@
   .two {
     background-color: #c0b4b4;
     font-size: 45px;
+    color: white;
+    box-shadow: #c0b4b4 0 0 10px;
+
   }
   .four {
     background-color: #9d9695;
     font-size: 45px;
+    color: white;
+    box-shadow: #9d9695 0 0 10px;
+
+
   }
   .eight {
     background-color: #d4d700;
     font-size: 45px;
+    color: white;
+    box-shadow: #d4d700 0 0 10px;
+
   }
   .sixteen {
     background-color: #80b918;
     font-size: 45px;
+    color: white;
+    box-shadow: #80b918 0 0 10px;
+
   }
   .thirtytwo {
     background-color: #2b863f;
     font-size: 45px;
+    color: white;
+    box-shadow: #2b863f 0 0 10px;
+
   }
   .sixtyfour {
     background-color: #1d915f;
     font-size: 45px;
+    color: white;
+    box-shadow: #1d915f 0 0 10px;
+
   }
   .onetwoeight {
     background-color: #1ed1af;
     font-size: 45px;
+    color: white;
+    box-shadow: #1ed1af 0 0 10px;
+
   }
   .twofivesix {
     background-color: #049a8f;
     font-size: 45px;
+    color: white;
+    box-shadow: #049a8f 0 0 10px;
+
   }
   .fiveonetwo {
     background-color: #f77f00;
     font-size: 45px;
+    color: white;
+    box-shadow: #f77f00 0 0 10px;
+
+
   }
   .onezerotwofour {
     background-color: #de121d;
     font-size: 35px;
+    color: white;
+    box-shadow: #de121d 0 0 10px;
+
   }
   .twozerofoureight {
     background-color: #e7e247;
     font-size: 35px;
+    color: white;
+    box-shadow: #e7e247 0 0 10px;
+
   }
   .more {
     background-color: #ede62f;
     font-size: 35px;
+    color: white;
+    box-shadow: #ede62f 0 0 10px;
+
   }
 
   .heading:after {
@@ -511,6 +556,7 @@
   }
 
   .score-container,.best-container {
+    box-shadow: #cccccc 0 0 20px;
     position: relative;
     display: inline-block;
     background: #f4f4f49e;
@@ -534,7 +580,7 @@
     font-size: 13px;
     line-height: 13px;
     text-align: center;
-    color: #eee4da;
+    color: white;
   }
 
   .score-container .score-addition,.best-container .score-addition {
@@ -599,6 +645,9 @@
     }
 
     .game-container .game-message p {
+      color: white;
+      text-shadow: #cccccc 0 0 20px;
+
       font-size: 30px;
       font-weight: 700;
       height: 20px;
@@ -636,11 +685,14 @@
     .game-container .game-message.game-won a.keep-playing-button {
       display: inline-block;
       background: #416849;
+      box-shadow: #416849 0 0 10px;
     }
 
     .game-container .game-message.game-over a.retry-button {
       display: inline-block;
       background: #416849;
+      box-shadow: #416849 0 0 10px;
+
     }
 
     .game-container .game-message.game-won,
@@ -679,50 +731,86 @@
     .two {
       background-color: #c0b4b4;
       font-size: 25px;
+      color: white;
+      box-shadow: #c0b4b4 0 0 10px;
+
     }
     .four {
       background-color: #9d9695;
       font-size: 25px;
+      color: white;
+      box-shadow: #9d9695 0 0 10px;
+
     }
     .eight {
       background-color: #d4d700;
       font-size: 25px;
+      color: white;
+      box-shadow: #d4d700 0 0 10px;
+
     }
     .sixteen {
       background-color: #80b918;
       font-size: 25px;
+      color: white;
+      box-shadow: #80b918 0 0 10px;
+
     }
     .thirtytwo {
       background-color: #2b863f;
       font-size: 25px;
+      color: white;
+      box-shadow: #2b863f 0 0 10px;
+
     }
     .sixtyfour {
       background-color: #1d915f;
       font-size: 25px;
+      color: white;
+      box-shadow: #1d915f 0 0 10px;
+
     }
     .onetwoeight {
       background-color: #1ed1af;
       font-size: 25px;
+      color: white;
+      box-shadow: #1ed1af 0 0 10px;
+
     }
     .twofivesix {
       background-color: #049a8f;
       font-size: 25px;
+      color: white;
+      box-shadow: #049a8f 0 0 10px;
+
     }
     .fiveonetwo {
       background-color: #f77f00;
       font-size: 25px;
+      color: white;
+      box-shadow: #f77f00 0 0 10px;
+
     }
     .onezerotwofour {
-      background-color: #f77f00;
+      background-color: #de121d;
       font-size: 15px;
+      color: white;
+      box-shadow: #de121d 0 0 10px;
+
     }
     .twozerofoureight {
       background-color: #e7e247;
       font-size: 15px;
+      color: white;
+      box-shadow: #e7e247 0 0 10px;
+
     }
     .more {
       background-color: #ede62f;
       font-size: 15px;
+      color: white;
+      box-shadow: #ede62f 0 0 10px;
+
     }
 
     .heading {
