@@ -14,10 +14,10 @@
   let gameWasWon = false;
   let assistant;
   
-  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmZjAwMTM4ZmI0M2JiOTI0MGM5ZDQ2ZDViZDQ3ZDdkM2YxYmQ3NWFjYTRiOTk5OWU4ZGE1YjExN2Y4ZmJkNzYyOTQzMjQiLCJhdWQiOiJWUFMiLCJleHAiOjE2NTQxODMwMDAsImlhdCI6MTY1NDA5NjU5MCwiaXNzIjoiS0VZTUFTVEVSIiwidHlwZSI6IkJlYXJlciIsImp0aSI6IjEwYWQwZDBiLWU2YTMtNDc1Yy1hYWQ3LWQxN2JmMWY4NzgwNCIsInNpZCI6IjNlMWY1ZTRmLWM3NTMtNGExNS1hNjU4LWQ1MjM4NzhlNDc3OCJ9.h0VmEXoLjuCw7Xp_nW24rPDnJuJPx-8XL0bHu2bhqVIrKymiWXjGG5XEsqv9JBl9UU0kAn_kQnSIHObUHdbFciQvnaYjRnYYEm6dGUUHnJ8hh7OhAEn3gENq_BxIroeOjXrpss655e3Rv1EDfewHeZ49L6ZMcHQZmhgosZmjpqF6dfNb9zNPQANHVZi7hxeRH_wQAqeB0L3EGLNCwVn03e6Mw2W8tOYnt2UF8tSgfnYnM3LWmpd5UEDo_5DaFLh8NkUvbfj4LrAThpPYQMihDcHQ8EJ6ucUJbtpSdW0Z1SPiSAV9N5LlMHIfM2F5HplpWrGArDIoFaAfYE1MjIFw4C4dYdRjxsbxW89xnE3VP6gAA_sF5uv305vdFntQ4t4GiWbs5IuanOSF2bCtElgANKU6Y7HLalhRaDTYoJzH-DOlwwZREZU9uB4EW0ZkatvQwb9mryZSjJgk4pS626Relowr04d0UivdiPU2KVf1dRkNWANLpLl7Fq22Ue89ylB__p1ond-2yeNKxvI4mXrg4RuSniaDc6YUML9_5mMdpplpq1fU9yONJMnYEtCHXflv0k27lk87cQZDek0696XoEV-pId29rNdoZv1qttVnoYXHOFoxnO1XtchoDjDF9Ju3SYamVWv7crmGkha7Jwp9l59cAZy63yfZXNWomsgJQ24";
+  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNWJkNWM2MzFhMjZhYjU3NzA4NzJjYjM2ZmYxMzhiM2M5MzZjZjY2ZDk3YzRiODQ2NDQ3NTc5NjYzNDVkOTZhNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY1NDI1MDk2MywiaWF0IjoxNjU0MTY0NTUzLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiNjk3NWQ0Y2EtMTE4Yi00MWIwLWJmZjItNGVmYzU4ODNiMWM0Iiwic2lkIjoiYWM5NGRlYTAtNDE1MC00MGU5LWJkYmItMzMyNTBkODZmM2M5In0.iCamb_FBQMk5m8z-ubxNNbHe529OO_3Y2zF8uMdkSjH_zZjrDBjtSOInSpbUDiMXMPaBDtpNpyZYk0hLeqbse_89C-oSnLiVLclqg77jLeZgpDL6CgApXEwvIhdZq4eSmcSuSCyxofkOYj0affFmktvsJC2gmeEQ9Lm5RJVuDfcS1g-b2ar2i_eM9ifKOZnmq1LrJ8zaG91H-o-RAKiYFPlkXUvFxEA9PWiEji3GZfzcCPrJQPIZR-BAxnK4m3jwM3DgkJCbiDIMOpwxpVolQD3LD5dkctJTM0kUfqqSKy_VkcGWW3pSWXeD3MCnFZnTwm-76Tl_MSxG6XiRUykHsLMSl_bzB51slfVfUeDafHk1mQbbWeQ5vlFZbE-555xdGSsIe3sN4J6FTtnL-FcL-K3wCI5r0q_Z9gZ-TyzU3ZujwSoThlUPmkqIE9WbiuWS5IVfifrGZxlXrNsD-JgV4sevzA7NYjAe76KVMHtvk3Ua0A9mbg_f0JXRMH1EqIrCUGTU0e-e6gDw0yjuUVgGCUeDcK6Gkhlv0tA1msK80sRdPQHXDk6sGyVW0agw9vTnHtyY0h0fdeJ4TD8sUJvXPYvW_J58MX8LB89BcZIfDyoH-yDiiV8KzGhumjaKo5sTAWpqie6Bq-YWTo1ygLKoU6D8eW1hF6Eeu2Y1YKXNXTk";
 
   // Set the name of your SmartApp for activation
-  let initPhrase = 'запусти 2048';
+  let initPhrase = 'запусти головоломку 2048';
   let character = 'eva'; // default, before sber client gets state
   $: setTheme(character);
   let xTouchCoordinate, yTouchCoordinate;
@@ -71,6 +71,7 @@
         let dir = wordToDir(word);
         makeMove(dir);
       }
+      logger.log(event);
     });
   });
 
@@ -114,7 +115,7 @@
     let ind_pair = zeroPos[rand];
     let x = ind_pair[0], y = ind_pair[1];
 
-    numbers[x][y] = (Math.random() > 0.5 ? 2 : 4);
+    numbers[x][y] = (Math.random() > 0.1 ? 2 : 4);
 	// let dxdy = [[0, 1], [1, 0], [0, -1], [-1, 0]];
 	// for (let i = 0; i < 4; ++i){
 	// 	let dx = dxdy[i][0], dy = dxdy[i][1];
@@ -377,7 +378,7 @@
 
   .game-container .game-message.game-won {
 
-    background: rgba(30, 158, 55, .4);
+    background: rgba(30, 158, 55, .2);
     color: #f9f6f2
 
   }
@@ -678,7 +679,7 @@
     }
 
     .game-container .game-message.game-won {
-      background: rgba(30, 158, 55, .4);
+      background: rgba(30, 158, 55, .2);
       color: #f9f6f2
     }
 
