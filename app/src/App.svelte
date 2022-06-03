@@ -44,9 +44,7 @@
     });
 
     assistant.on('data', event => {
-      // Set your action or data hooks
       if (!event.type) {
-        // Use invariants to prevent errors on Sber Portal
         return;
       }
       // FIXME Add event handler for closing the app and use "assistant.close()" inside it;
@@ -56,7 +54,11 @@
       }
 
       if (event.type === 'smart_app_data') {
-        if (event.smart_app_data.type === 'direction') {
+        if (event.smart_app_data.type === 'close_app') {
+          logger.log('Closing app')
+          assistant.close();
+          return;
+        }else if (event.smart_app_data.type === 'direction') {
           let dir = event.smart_app_data.dir;
           makeMove(dir);
         }else if (event.smart_app_data.type === 'help') {
