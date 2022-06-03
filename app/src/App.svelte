@@ -14,7 +14,7 @@
   let gameWasWon = false;
   let assistant;
   
-  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNWJkNWM2MzFhMjZhYjU3NzA4NzJjYjM2ZmYxMzhiM2M5MzZjZjY2ZDk3YzRiODQ2NDQ3NTc5NjYzNDVkOTZhNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY1NDI1MDk2MywiaWF0IjoxNjU0MTY0NTUzLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiNjk3NWQ0Y2EtMTE4Yi00MWIwLWJmZjItNGVmYzU4ODNiMWM0Iiwic2lkIjoiYWM5NGRlYTAtNDE1MC00MGU5LWJkYmItMzMyNTBkODZmM2M5In0.iCamb_FBQMk5m8z-ubxNNbHe529OO_3Y2zF8uMdkSjH_zZjrDBjtSOInSpbUDiMXMPaBDtpNpyZYk0hLeqbse_89C-oSnLiVLclqg77jLeZgpDL6CgApXEwvIhdZq4eSmcSuSCyxofkOYj0affFmktvsJC2gmeEQ9Lm5RJVuDfcS1g-b2ar2i_eM9ifKOZnmq1LrJ8zaG91H-o-RAKiYFPlkXUvFxEA9PWiEji3GZfzcCPrJQPIZR-BAxnK4m3jwM3DgkJCbiDIMOpwxpVolQD3LD5dkctJTM0kUfqqSKy_VkcGWW3pSWXeD3MCnFZnTwm-76Tl_MSxG6XiRUykHsLMSl_bzB51slfVfUeDafHk1mQbbWeQ5vlFZbE-555xdGSsIe3sN4J6FTtnL-FcL-K3wCI5r0q_Z9gZ-TyzU3ZujwSoThlUPmkqIE9WbiuWS5IVfifrGZxlXrNsD-JgV4sevzA7NYjAe76KVMHtvk3Ua0A9mbg_f0JXRMH1EqIrCUGTU0e-e6gDw0yjuUVgGCUeDcK6Gkhlv0tA1msK80sRdPQHXDk6sGyVW0agw9vTnHtyY0h0fdeJ4TD8sUJvXPYvW_J58MX8LB89BcZIfDyoH-yDiiV8KzGhumjaKo5sTAWpqie6Bq-YWTo1ygLKoU6D8eW1hF6Eeu2Y1YKXNXTk";
+  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNWJkNWM2MzFhMjZhYjU3NzA4NzJjYjM2ZmYxMzhiM2M5MzZjZjY2ZDk3YzRiODQ2NDQ3NTc5NjYzNDVkOTZhNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY1NDM0MDkyMiwiaWF0IjoxNjU0MjU0NTEyLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiMWY4NzBmZGQtYzBlOC00YzQyLWE5NjQtNzMxMWMxNjEzNjRhIiwic2lkIjoiM2U1MjI3NDAtNzY5My00NGMyLThmYTYtNzU2NTJiOGRjNDc1In0.KMs0WVZhR6meIgOHh2s4BYFAoJ1ZOWPAiS2KCTdOGkMgdUJ1ZtzOZGcRjBaqybji_3naGarYfytCcwZAS0Mfj-na7tJod3W7NGal4hivus_-yKvrjxS3wsy6Qw1xC1j0D9uAELtxYjywaE66yTn5VSQLyOf5c2bu_kgLbpuwWk_vTsFidcq71_FsvCKGzvgb_IsgxhS2bGNEp9y3oTcYdeTCTmCFVD_iQrvGhUeTI8646u8lMs5hIVHc1Tg7Ndwf2GdAmpD2dxpPd1cr7Sq91dw5B_-9y7YvuV1BfSRxfWyqjGAUg1X3kas8mEM4QozoZHJwn1DYxchjpf4UFsPzLS4QKZWyrPschtVzGOvMGbuIzBs4WeIufsS5sqSGxPzB0ngFgXgK9xlAusws5K_0GqfaIkgD2XlXxa1foOPJ6axQc0XJVwWo9lLdkvYCFL4EvDB6fAE1qMhAEAuhwEY3xGGgyYJAiaYHec6AEGFFIhJhWOcPEqBMcAzhiiRvhVxtFq6XuIb1qv_j1Fz4LgMflbr9oi16cqTclL3FiyM64lQXi0fenLFAS50I_aKr2eU2gHyeVG9SA2vmgKbAOokQ-nOyAFKMHFmoep3tkAwMJWEMx4MfxUxSURB3uFUuO9soUs_KUa-ePw-aJOXk-WOuXWnuYrpTrWJ4WQB9E5LlHHY";
 
   // Set the name of your SmartApp for activation
   let initPhrase = 'запусти головоломку 2048';
@@ -584,7 +584,7 @@
     color: white;
   }
 
-  .score-container .score-addition,.best-container .score-addition {
+  .score-container .best-container {
     position: absolute;
     right: 30px;
     color: red;
@@ -837,14 +837,6 @@
       float: left;
     }
 
-    .play-now a {
-      border-radius: 6px;
-      padding: 12px;
-      text-decoration: none;
-      background-color: #bbada0;
-      color: #fff;
-    }
-
     .game-intro {
       font-size: 17px;
       margin-bottom: 10px;
@@ -852,10 +844,6 @@
 
     .game-intro a {
       margin-right: 10px;
-    }
-
-    .play-now a:hover {
-      text-decoration: underline;
     }
   }
 
