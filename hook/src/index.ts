@@ -40,7 +40,6 @@ const textToCommand = (texts: string[]) => {
 
 function* script(r: SberRequest) {
   const rsp = r.buildRsp();
-  console.log(r);
   let movePhrases = ['Двигаю', 'Сдвигаю', 'Перемещаю', 'Переношу'];
   let maleFailPhrases = ['Я пока не выучил эту команду', 'Расшифровка этого займет несколько часов',
     'Над этим мне нужно подумать', 'Разработчики работают над добавлением этой команды',
@@ -67,7 +66,6 @@ function* script(r: SberRequest) {
   yield rsp;
 
   while (true) {
-    console.log(r.act);
     if (r.type === 'SERVER_ACTION' && r.act?.action_id === 'help') {
       rsp.msg = 'Две тысячи сорок восемь - это головоломка, в которой нужно соединять одинаковые числа,' +
           ' перемещая их влево, вправо, вверх или вниз.' +
@@ -77,6 +75,8 @@ function* script(r: SberRequest) {
     } else if (r.type === 'MESSAGE_TO_SKILL'){
 	  let texts = r.nlu.texts;
       let command = textToCommand(texts);
+      rsp.msg = texts.join(' ');
+      return;
       if (command.type === 'dir'){
         let { dir } = command;
         let phraseIndex = Math.floor(Math.random() * movePhrases.length);
