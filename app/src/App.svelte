@@ -14,10 +14,10 @@
   let gameWasWon = false;
   let assistant;
   
-  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNWJkNWM2MzFhMjZhYjU3NzA4NzJjYjM2ZmYxMzhiM2M5MzZjZjY2ZDk3YzRiODQ2NDQ3NTc5NjYzNDVkOTZhNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY1NDM0MDkyMiwiaWF0IjoxNjU0MjU0NTEyLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiMWY4NzBmZGQtYzBlOC00YzQyLWE5NjQtNzMxMWMxNjEzNjRhIiwic2lkIjoiM2U1MjI3NDAtNzY5My00NGMyLThmYTYtNzU2NTJiOGRjNDc1In0.KMs0WVZhR6meIgOHh2s4BYFAoJ1ZOWPAiS2KCTdOGkMgdUJ1ZtzOZGcRjBaqybji_3naGarYfytCcwZAS0Mfj-na7tJod3W7NGal4hivus_-yKvrjxS3wsy6Qw1xC1j0D9uAELtxYjywaE66yTn5VSQLyOf5c2bu_kgLbpuwWk_vTsFidcq71_FsvCKGzvgb_IsgxhS2bGNEp9y3oTcYdeTCTmCFVD_iQrvGhUeTI8646u8lMs5hIVHc1Tg7Ndwf2GdAmpD2dxpPd1cr7Sq91dw5B_-9y7YvuV1BfSRxfWyqjGAUg1X3kas8mEM4QozoZHJwn1DYxchjpf4UFsPzLS4QKZWyrPschtVzGOvMGbuIzBs4WeIufsS5sqSGxPzB0ngFgXgK9xlAusws5K_0GqfaIkgD2XlXxa1foOPJ6axQc0XJVwWo9lLdkvYCFL4EvDB6fAE1qMhAEAuhwEY3xGGgyYJAiaYHec6AEGFFIhJhWOcPEqBMcAzhiiRvhVxtFq6XuIb1qv_j1Fz4LgMflbr9oi16cqTclL3FiyM64lQXi0fenLFAS50I_aKr2eU2gHyeVG9SA2vmgKbAOokQ-nOyAFKMHFmoep3tkAwMJWEMx4MfxUxSURB3uFUuO9soUs_KUa-ePw-aJOXk-WOuXWnuYrpTrWJ4WQB9E5LlHHY";
+  let token = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJiNWJkNWM2MzFhMjZhYjU3NzA4NzJjYjM2ZmYxMzhiM2M5MzZjZjY2ZDk3YzRiODQ2NDQ3NTc5NjYzNDVkOTZhNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTY1NDYwOTk3NywiaWF0IjoxNjU0NTIzNTY3LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiOTA5ZjAzZGItNWNkNS00MTEyLWFlMDktMzEwNjQ2ZjEyMTU5Iiwic2lkIjoiMGMwMDE2N2EtZTJhOS00ZjVkLWJkNWEtOTc1YWQ2NWM2MTJiIn0.K4S7r2PUZehBXAyMAbmHBO9XpYEhIRSM3ykU-HMNIm1ZKTqND2m1UVS1PQpu8b3SbyS0Id8JAXCAsj0vnPv4tLKq3rjn5tArMtcmgrzqvD1Z498eFZU0LbjA7BE9wWWAKPIu_pBAX90WbdsPrIOl6uAgFIRrkM6By-NOTvpj_E_j0z-VCgemWO_jsW4wMcqFXK2uXACoixJqTcP9-3TQ3Uh6HJ2vH4tEx0siPztWEvEfEh_gv2ohFFB0XcTh1KT72-iXAAMeTEFfIqsOk5UBxApYZUC3KEfQ2TmCHQojfawXXf7r1sgS0e8UkZnQI1CPdwhTfdxZjj3Rrok8zFUzpV8mWYfHD5AAthdqbrPnLwFnx5kfWATVGXRlx8xgWiEkqvh4Mi88KiDMbK8oejHpcwykEyYGTFhScR2ZLDzH8BwTwsJhmbKBa2m9od4AUIu6OPZA0IWUsgTBTUYUgvrlJIJj3npjULPfjpxB1f9LIxWNr4H7h8OSnInBbPx1QJN2kpg72k85ovDfWcKT5gMMkS9JnZwcsQHb4uSd1ZyKiYr0FztCgNJRvsY-8Ld0bGK4qzQtwG0_Ojp6Ho3wOaf6bEHJ3ycGsT_j5zIXKUZEmjhpqr7vwcSVC2Xiqkt68hHcVQORmGN8JXkUBSSbmgFJO1i-PAr5Exla0Zj6A7JjfrA";
 
   // Set the name of your SmartApp for activation
-  let initPhrase = 'запусти головоломку 2048';
+  let initPhrase = 'запусти тест';
   let character = 'eva'; // default, before sber client gets state
   $: setTheme(character);
   let xTouchCoordinate, yTouchCoordinate;
@@ -65,6 +65,8 @@
           helpIsAsked = true;
         }else if (event.smart_app_data.type === 'restart') {
           reset();
+        }else if (event.smart_app_data.type == 'close') {
+          helpIsAsked = false;
         }
       }
 
@@ -76,6 +78,14 @@
       logger.log(event);
     });
   });
+
+  const call_help = () => {
+    assistant.sendData({
+      action: {
+        action_id: 'help'
+      }
+    });
+  }
 
   let game = {
     score: 0,
@@ -867,7 +877,7 @@
   </div>
   <div class="game-intro">
     <a class="restart-button" on:click={reset}>Заново</a>
-    <a on:click={() => helpIsAsked = true}>Помощь</a>
+    <a on:click={() => call_help()}>Помощь</a>
   </div>
   <div class="game-container">
     <div class="game-messages">
@@ -895,7 +905,7 @@
         <div slot="rules" style="color:black">
           2048 - головоломка, в которой нужно соединять одинаковые числа,
           перемещая их влево, вправо, вверх или вниз.
-          После каждого хода на поле в случайном месте появляется либо 2 либо 4.
+          После каждого хода на поле в случайном месте появляется либо, 2 либо 4.
           Чтобы выиграть нужно, чтобы одно из чисел стало равным 2048.
         </div>
       </Help>
