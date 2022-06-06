@@ -109,7 +109,7 @@ function* script(r: SberRequest) {
       }else if (command.type === 'restart'){
         rsp.msg = '';
         rsp.data = command;
-      }else if (command.type == 'close'){
+      }else if (command.type === 'close'){
         rsp.msg = '';
         rsp.data = command;
       }
