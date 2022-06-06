@@ -75,8 +75,6 @@ function* script(r: SberRequest) {
     } else if (r.type === 'MESSAGE_TO_SKILL'){
 	  let texts = r.nlu.texts;
       let command = textToCommand(texts);
-      rsp.msg = texts.join(' ');
-      return;
       if (command.type === 'dir'){
         let { dir } = command;
         let phraseIndex = Math.floor(Math.random() * movePhrases.length);
