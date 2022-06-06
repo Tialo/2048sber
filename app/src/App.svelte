@@ -65,7 +65,7 @@
           helpIsAsked = true;
         }else if (event.smart_app_data.type === 'restart') {
           reset();
-        }else if (event.smart_app_data.type == 'close') {
+        }else if (event.smart_app_data.type === 'close') {
           helpIsAsked = false;
         }
       }
