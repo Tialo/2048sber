@@ -67,7 +67,10 @@ function* script(r: SberRequest) {
 
   while (true) {
     if (r.type === 'SERVER_ACTION' && r.act?.action_id === 'help') {
-      rsp.msg = 'работает';
+      rsp.msg = 'Две тысячи сорок восемь - это головоломка, в которой нужно соединять одинаковые числа,' +
+          ' перемещая их влево, вправо, вверх или вниз.' +
+          ' После каждого хода на поле в случайном месте появляется либо двойка, либо четверка.' +
+          ' Чтобы выиграть нужно, чтобы одно из чисел стало равным двум тысячам сорока восьми';
       rsp.data = {type: 'help'}
     } else if (r.type === 'MESSAGE_TO_SKILL'){
 	  let texts = r.nlu.texts;
@@ -110,6 +113,9 @@ function* script(r: SberRequest) {
         rsp.msg = '';
         rsp.data = command;
       }
+    }else{
+      rsp.msg = '';
+      rsp.data = {};
     }
     yield rsp;
   }
